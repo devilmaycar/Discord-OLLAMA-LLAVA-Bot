@@ -11,7 +11,7 @@ class MyClient(discord.Client):
         intents = discord.Intents.default()
         intents.messages = True
         intents.message_content = True
-        intents.reactions = True  # Enable reactions to track replies
+        intents.reactions = True 
         super().__init__(intents=intents, **options)
         self.conversations = {}
 
@@ -54,7 +54,7 @@ class MyClient(discord.Client):
                 # Describe image 
                 ai_response = Discord.describe_image(file_path)
 
-                # Delete the message if it contains specific keywords
+                # Delete the message 
                 if any(keyword in ai_response.lower() for keyword in ["dog", "puppy", "dogs", "puppies"]):
                     await message.delete()
                     await message.channel.send(warning_message)
@@ -62,7 +62,7 @@ class MyClient(discord.Client):
                 else:
                     await message.channel.send(ai_response)
 
-                    # Update conversation history with the image description
+                    # Update conversation 
                     user_message = {'role': 'user', 'content': 'Give a short description', 'images': [file_path]}
                     ai_response = {'role': 'assistant', 'content': ai_response}
                     self.conversations[user_name].append(user_message)
