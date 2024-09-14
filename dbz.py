@@ -2,7 +2,7 @@ import discord
 import os
 import Discord
 
-TOKEN = 'MTI4MTU4MzU2MjAyNTU5OTEwOA.GEUX8h.8UpdsKO0X5aX3KoxoZQ_GB2E4H0sRuZAVyV10Q'
+TOKEN = 'token here'
 SAVE_DIRECTORY = r'C:\Users\Administrator\Desktop\Hackathon Project\DiscordImages'
 warning_message = 'Please don\'t send pictures like that'
 
@@ -70,5 +70,3 @@ class MyClient(discord.Client):
 
 client = MyClient()
 client.run(TOKEN)
-
-2m1KAxKX4Ia3j2Ar61MFVMEfAZg_57CG2SuxGu5PZquLx2nLK
